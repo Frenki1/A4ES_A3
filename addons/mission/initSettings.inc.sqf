@@ -4,6 +4,6 @@
     QGVAR(checkTemplate), "CHECKBOX",
     [LSTRING(Settings_checkTemplate), LSTRING(Settings_checkTemplate_Tooltip)],
     LSTRING(Settings_Addon),
-    true,
+    false,
     true
 ] call CBA_settings_fnc_init;

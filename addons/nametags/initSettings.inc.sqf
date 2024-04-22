@@ -19,7 +19,7 @@
         LSTRING(Settings_show3DNameTag_Freelook),
         LSTRING(Settings_show3DNameTag_OnCursor),
         LSTRING(Settings_show3DNameTag_Both)
-      ], 1
+      ], 3
     ],
     2,
     {_this call FUNC(onDrawSettingsChanged);}
@@ -37,7 +37,7 @@
     QGVAR(showLeaderIcon), "CHECKBOX",
     [LSTRING(Settings_showLeaderIcon), LSTRING(Settings_showLeaderIcon_Desc)],
     LSTRING(Settings_Addon),
-    true,
+    false,
     2
 ] call CBA_settings_fnc_init;
 
