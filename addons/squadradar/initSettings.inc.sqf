@@ -13,7 +13,7 @@
     QGVAR(showRadar), "CHECKBOX",
     [LSTRING(Settings_showRadar), LSTRING(Settings_showRadar_Tooltip)],
     LSTRING(Settings_Addon),
-    true,
+    false,
     2,
     {_this call FUNC(handleSettingsChanged);}
 ] call CBA_settings_fnc_init;

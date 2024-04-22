@@ -14,14 +14,11 @@ if (
   0 call FUNC(clear2DNameTag);
 };
 
+private _targetsData = [[], DFUNC(getAreaTargets), ace_player, QGVAR(areaTargetsCache), 1] call ACEFUNC(common,cachedCall);
+{_x call FUNC(draw3DNameTag)} forEach _targetsData;
+
 if (freeLook) then {
-  // No freelook name tag, exit
-  if (GVAR(show3DNameTag) != 1 && {GVAR(show3DNameTag) != 3}) exitWith {};
-
-  0 call FUNC(clear2DNameTag);
-
-  private _targetsData = [[], DFUNC(getAreaTargets), ace_player, QGVAR(areaTargetsCache), 1] call ACEFUNC(common,cachedCall);
-  {_x call FUNC(draw3DNameTag)} forEach _targetsData;
+0 call FUNC(clear2DNameTag);
 } else {
   if (!GVAR(show2DNameTag) && {GVAR(show3DNameTag) != 2} && {GVAR(show3DNameTag) != 3}) exitWith {};
 
